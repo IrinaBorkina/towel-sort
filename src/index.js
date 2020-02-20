@@ -1,6 +1,9 @@
+module.exports = function towelSort(matrix) {
+    if (matrix == undefined) return [];
 
-// You should implement your task here.
+    const matrix2 = matrix.map((el, i) =>
+        i % 2 !== 0 ? el.reverse() : el
+    );
 
-module.exports = function towelSort (matrix) {
-  return [];
-}
+    return [].concat(...matrix2);
+};
